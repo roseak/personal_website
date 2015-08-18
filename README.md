@@ -1,1 +1,3 @@
-# personal_website
+# Personal Website
+
+Module 2 prework.
