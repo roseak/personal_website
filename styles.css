@@ -72,18 +72,19 @@ body {
 }
 
 h1 {
-  margin: 280px 30px 20px 30px;
-  font-size: 60px;
+  margin: 270px 30px 0px 30px;
   text-align: center;
   color: white;
-  font-family: sans-serif;
+  font: 70px 'Rock Salt', sans-serif;
+  font-weight: 400;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, .5);
 }
 
 h3 {
-  font-size: 25px;
+  font: 25px 'Overlock SC', cursive;
   text-align: center;
   color: white;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 ul {
@@ -94,19 +95,14 @@ li {
   display: inline-block;
   border: 2px solid white;
   height: 30px;
-  margin: 2%;
+  margin: 1%;
+  margin-top: 5px;
   width: 80px;
   padding: 4px;
   color: white;
 }
 
 li:hover {
-  display: inline-block;
-  border: 2px solid white;
-  height: 30px;
-  margin: 2%;
-  width: 80px;
-  padding: 4px;
   background-color: white;
   color: green;
 }
@@ -114,15 +110,15 @@ li:hover {
 a {
   text-decoration: none;
   color: white;
-  font-weight: 600;
+  font-weight: 550;
 }
 
-.links a {
+.navigation a {
   font-variant: small-caps;
 }
 
 a:hover {
-  color: yellow;
+  color: #EFFFC4;
 }
 
 @media (max-width 500px) {
