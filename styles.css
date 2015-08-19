@@ -72,16 +72,18 @@ body {
 }
 
 h1 {
-  margin: 270px 30px 20px 30px;
+  margin: 280px 30px 20px 30px;
   font-size: 60px;
   text-align: center;
   color: white;
+  font-family: sans-serif;
 }
 
 h3 {
   font-size: 25px;
   text-align: center;
   color: white;
+  font-weight: 600;
 }
 
 ul {
@@ -98,9 +100,25 @@ li {
   color: white;
 }
 
+li:hover {
+  display: inline-block;
+  border: 2px solid white;
+  height: 30px;
+  margin: 2%;
+  width: 80px;
+  padding: 4px;
+  background-color: white;
+  color: green;
+}
+
 a {
   text-decoration: none;
   color: white;
+  font-weight: 600;
+}
+
+.links a {
+  font-variant: small-caps;
 }
 
 a:hover {
