@@ -90,7 +90,7 @@ h1 {
   margin: 255px 30px 0px 30px;
   text-align: center;
   color: white;
-  font: 70px 'Rock Salt', sans-serif;
+  font: 70px 'Syncopate', sans-serif;
   font-weight: 400;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, .5);
 }
@@ -120,20 +120,25 @@ li {
 
 li:hover {
   background-color: white;
-  color: black;
+  color: #6E81AA;
 }
 
 a {
   text-decoration: none;
-  color: white;
+  /*color: white;*/
+  color: #89A1D4;
   font-weight: 550;
+}
+
+.company:hover {
+  color: white;
 }
 
 .navigation a {
   font-variant: small-caps;
 }
 
-a:hover {
+.title {
   color: #89A1D4;
 }
 
