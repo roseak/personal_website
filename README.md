@@ -1,3 +1,3 @@
 # Personal Website
 
-Module 2 prework.
+Added some animations I played around with after a workshop with Sarah Drasner and Val Head.
