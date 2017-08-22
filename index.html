@@ -6,23 +6,139 @@
     <link href='http://fonts.googleapis.com/css?family=Rock+Salt|Syncopate|Overlock+SC' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" type="text/css" href="/normalize.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/utils/Draggable.min.js"></script>
   </head>
   <body>
     <video autoplay loop muted id="background">
       <source src="snow_falling.mp4" type="video/mp4">
     </video>
     <div class="container">
-      <h1>Rose Kohn</h1>
-      <h3 class="title">Software Engineer</h3>
-      <div class="navigation">
-        <ul>
-          <a href="https://www.linkedin.com/pub/rose-kohn/3/613/315" target="_blank"><li>LinkedIn</li></a>
-          <a href="https://github.com/roseak" target="_blank"><li>GitHub</li></a>
-          <a href="http://people.turing.io/people/rose_a_kohn" target="_blank"><li>Portfolio</li></a>
-          <a href="https://twitter.com/kohniva" target="_blank"><li>Twitter</li></a>
-          <a href="mailto:rose.kohn@gmail.com" target="_blank"><li>Contact</li></a>
-        </ul>
+      <div class='menu-wrapper menu'>
+        <svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" viewBox="-2 -2 550 400" id="menu">
+          <g id="symbolsContainer">
+            <symbol class="icon icon-" id="icon-1" viewBox="0 0 40 40">
+              <!-- svg credit to Freepik from Flaticon -->
+              <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410.155 410.155">
+                <path d="M403.632 74.18c-9.113 4.04-18.573 7.23-28.28 9.537 10.696-10.164 18.738-22.877 23.275-37.067 1.295-4.05-3.105-7.554-6.763-5.385-13.504 8.01-28.05 14.02-43.235 17.862-.882.223-1.79.336-2.703.336-2.766 0-5.455-1.027-7.57-2.89C322.2 42.332 301.422 34.49 279.85 34.49c-9.336 0-18.76 1.456-28.015 4.326C223.163 47.71 201.04 71.36 194.1 100.54c-2.605 10.945-3.31 21.9-2.098 32.56.14 1.225-.44 2.08-.797 2.48-.627.704-1.516 1.107-2.44 1.107-.102 0-.208-.005-.313-.015-62.762-5.83-119.358-36.068-159.363-85.14-2.04-2.503-5.953-2.196-7.58.593C13.678 65.565 9.538 80.937 9.538 96.58c0 23.97 9.63 46.562 26.36 63.03-7.035-1.667-13.844-4.294-20.17-7.807-3.06-1.7-6.824.485-6.867 3.985-.438 35.612 20.412 67.3 51.646 81.57-.63.014-1.258.02-1.888.02-4.95 0-9.964-.477-14.898-1.42-3.446-.658-6.34 2.61-5.27 5.952 10.137 31.65 37.39 54.98 70 60.278-27.065 18.17-58.584 27.753-91.39 27.753l-10.226-.005c-3.15 0-5.816 2.054-6.62 5.106-.79 3.007.667 6.178 3.354 7.74 36.966 21.514 79.13 32.884 121.955 32.884 37.485 0 72.55-7.44 104.22-22.11 29.032-13.448 54.688-32.673 76.254-57.14 20.09-22.792 35.8-49.103 46.692-78.2 10.382-27.738 15.87-57.334 15.87-85.59v-1.346c0-4.537 2.05-8.806 5.63-11.712 13.586-11.03 25.416-24.014 35.16-38.59 2.574-3.85-1.484-8.674-5.718-6.796z" fill="#76A9EA"/>
+              </svg>
+            </symbol>
+            <symbol class="icon icon-" id="icon-2" viewBox="0 0 40 40">
+              <!-- svg credit to Freepik from Flaticon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 478.613 478.613">
+                <path d="M427.5 200.695c1.777-11.238 2.885-23.56 3.164-37.377-.107-59.246-28.468-80.21-33.925-90.038 8.036-44.89-1.332-65.31-5.69-72.3-16.07-5.703-55.91 14.723-77.677 29.102-35.49-10.39-110.494-9.375-138.62 2.69C122.855-4.39 95.407 1.276 95.407 1.276s-17.745 31.82-4.69 78.37c-17.076 21.76-29.803 37.144-29.803 77.95 0 9.773.607 19.008 1.637 27.893 14.705 77.318 75.97 110.674 136.15 116.426-9.056 6.88-19.928 19.903-21.432 34.992-11.38 7.357-34.268 9.79-52.067 4.193-24.94-7.88-34.486-57.265-71.833-50.22-8.08 1.512-6.475 6.842.523 11.386 11.378 7.38 22.094 16.554 30.354 36.185 6.344 15.073 19.687 41.983 61.873 41.983 16.747 0 28.477-1.98 28.477-1.98s.32 38.407.32 53.386c0 17.237-23.265 22.077-23.265 30.347 0 3.29 7.7 3.6 13.888 3.6 12.23 0 37.673-10.185 37.673-28.102 0-14.237.227-62.08.227-70.46 0-18.307 9.81-24.136 9.81-24.136s1.202 97.726-2.36 110.828c-4.177 15.408-11.744 13.22-11.744 20.076 0 10.233 30.59 2.502 40.735-19.897 7.85-17.495 4.335-113.33 4.335-113.33l8.183-.18s.094 43.893-.188 63.945c-.295 20.77-2.438 47.025 9.898 59.417 8.097 8.15 32.903 22.45 32.903 9.38 0-7.573-17.37-13.832-17.37-34.352V344.45c10.553 0 12.734 31.072 12.734 31.072l3.804 57.727s-2.526 21.064 22.756 29.855c8.925 3.126 28.018 3.976 28.913-1.27.897-5.26-22.99-13.04-23.217-29.343-.123-9.93.445-15.742.445-58.934 0-43.168-5.8-59.137-26.007-71.863 58.6-6.014 119.468-32.185 130.433-101z" fill="#FFFFFF"/>
+              </svg>
+            </symbol>
+            <symbol class="icon icon-" id="icon-3" viewBox="0 0 40 40">
+              <!-- svg credit to Freepik from Flaticon -->
+              <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <g fill="#5082F6">
+                  <path d="M119.18 164.715H16.396c-4.562 0-8.258 3.698-8.258 8.258v330.204c0 4.562 3.696 8.258 8.258 8.258H119.18c4.562 0 8.258-3.696 8.258-8.258V172.973c0-4.56-3.696-8.258-8.258-8.258z"/>
+                  <path d="M67.825.563C30.425.563 0 30.956 0 68.313c0 37.375 30.426 67.78 67.825 67.78 37.37 0 67.77-30.406 67.77-67.78.002-37.357-30.4-67.75-67.77-67.75z"/>
+                  <path d="M380.62 156.508c-41.28 0-71.798 17.747-90.308 37.91v-21.445c0-4.56-3.696-8.258-8.258-8.258H183.62c-4.562 0-8.258 3.698-8.258 8.258v330.204c0 4.562 3.696 8.258 8.258 8.258h102.56c4.562 0 8.258-3.696 8.258-8.258V339.803c0-55.053 14.954-76.5 53.33-76.5 41.797 0 45.118 34.382 45.118 79.333V503.18c0 4.56 3.696 8.257 8.258 8.257h102.598c4.562 0 8.258-3.696 8.258-8.258V322.055c0-81.862-15.61-165.548-131.38-165.548z"/>
+                </g>
+              </svg>
+            </symbol>
+            <symbol class="icon icon-" id="icon-4" viewBox="0 0 40 40">
+              <!-- svg credit to Vectors Market from Flaticon-->
+              <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 502.073 502.073">
+                <path d="M501.812 481.176c0 6.27-2.09 11.494-6.27 15.673-4.18 3.134-8.358 5.223-14.628 5.223H21.16c-5.225 0-10.45-2.09-14.63-5.224-4.18-4.18-6.27-9.405-6.27-15.674V175.02h501.552v306.156z" fill="#FFD15C"/>
+                <path d="M495.543 496.85c-4.18 3.134-8.36 5.223-14.63 5.223H21.16c-5.225 0-10.45-2.09-14.63-5.224l244.506-210.025L495.543 496.85z" fill="#F8B64C"/>
+                <path d="M501.812 175.02l-71.053 51.2-166.14 119.12c-8.36 6.268-19.853 6.268-28.212 0L71.314 226.22.26 175.02l71.054-51.2L225.96 13.06l11.493-8.358c8.36-6.27 19.853-6.27 28.212 0l11.494 8.36 74.187 53.29 36.57 26.12 42.842 31.348 71.052 51.2z" fill="#40596B"/>
+                <path d="M430.76 77.845V226.22L264.62 345.34c-8.36 6.268-19.853 6.268-28.212 0L71.314 226.22V33.96c0-11.495 9.404-20.9 20.898-20.9H364.93l65.83 64.785z" fill="#F2F2F2"/>
+                <path d="M365.975 61.127c0 9.404 7.314 16.718 16.718 16.718h48.065L365.974 13.06v48.067z" fill="#CDD6E0"/>
+                <path d="M312.686 223.086h16.718c-5.224 11.494-13.584 19.853-25.078 26.122-12.54 7.314-28.212 10.45-47.02 10.45-17.763 0-33.437-3.136-45.976-9.405-12.54-6.27-22.988-14.63-29.257-27.167-6.27-11.494-9.404-25.078-9.404-38.66 0-15.674 3.134-29.258 10.448-42.842s16.718-22.988 29.257-29.257c12.54-6.27 27.167-9.404 42.84-9.404 13.585 0 26.123 3.135 36.572 8.36 10.45 5.223 18.808 12.538 24.033 22.987 5.224 9.404 8.36 20.898 8.36 32.392 0 13.584-4.18 26.122-12.54 37.616-10.45 14.63-24.033 20.898-40.75 20.898-4.18 0-8.36-1.045-10.45-2.09-2.09-2.09-4.18-4.18-4.18-7.314-6.27 6.27-13.584 9.404-21.943 9.404-9.404 0-16.718-3.135-21.943-9.404-6.27-6.27-9.404-14.63-9.404-25.078 0-12.54 3.135-24.033 10.45-35.527 8.358-12.54 19.852-18.808 33.436-18.808 9.404 0 16.718 4.18 21.943 11.493l2.09-9.404h21.942l-12.54 58.513c-1.044 4.18-1.044 6.27-1.044 7.314s0 2.09 1.045 3.135 1.045 1.045 2.09 1.045c2.09 0 6.27-2.09 10.45-5.224 5.223-4.18 10.448-9.404 13.583-16.718s5.224-14.63 5.224-21.943c0-13.584-5.224-25.078-14.63-33.437-9.403-9.404-22.987-13.584-40.75-13.584-14.63 0-27.167 3.136-37.616 9.405-10.45 6.27-17.763 14.63-22.988 25.078s-7.314 21.943-7.314 34.482c0 11.494 3.135 21.943 8.36 31.347 6.268 9.404 13.583 16.718 24.032 20.898 10.45 4.18 21.943 6.27 35.527 6.27 12.54 0 24.034-2.09 33.438-5.225 9.404-4.18 16.718-9.405 22.988-16.72zM223.87 189.65c0 7.313 1.044 11.493 4.18 15.672 3.134 3.135 6.268 5.224 10.448 5.224 3.135 0 6.27-1.045 8.36-2.09s4.18-3.135 6.268-5.224c3.135-3.135 5.225-8.36 7.314-14.63 2.09-6.268 3.135-12.538 3.135-17.762 0-6.27-1.045-10.45-4.18-14.63-3.135-3.134-6.27-5.223-10.45-5.223s-9.403 2.09-12.538 5.224c-4.18 3.136-7.314 8.36-9.404 15.674-2.09 6.27-3.134 12.54-3.134 17.765z" fill="#FF7058"/>
+              </svg>
+            </symbol>
+          </g>
+          <g id="itemsContainer" class='hide'>
+            <a class="item" role="link" tabindex="0" target="_blank" id="item-1" xlink:href="https://www.linkedin.com/pub/rose-kohn/3/613/315" xlink:title="LinkedIn" transform="matrix(1,0,0,1,0,0)" data-svg-origin="250 250" style="">
+              <use xlink:href="#icon-1" width="40" height="40" x="391.6795959472656" y="177.4671173095703" transform="rotate(72 411.6795959472656 197.4671173095703)"></use>
+            </a>
+            <a class="item" role="link" tabindex="0" target="_blank" id="item-2" xlink:href="https://github.com/roseak" xlink:title="Github" transform="matrix(0.80901,-0.58778,0.58778,0.80901,-99.20056166685515,194.69206447938143)" data-svg-origin="250 250" style="">
+              <use xlink:href="#icon-2" width="40" height="40" x="391.6795959472656" y="177.4671173095703" transform="rotate(72 411.6795959472656 197.4671173095703)"></use>
+            </a>
+            <a class="item" role="link" tabindex="0" target="_blank" id="item-3" xlink:href="https://twitter.com/kohniva" xlink:title="Twitter" transform="matrix(0.30901,-0.95105,0.95105,0.30901,-65.01837766752521,410.5098804800515)" data-svg-origin="250 250" style="">
+              <use xlink:href="#icon-3" width="40" height="40" x="391.6795959472656" y="177.4671173095703" transform="rotate(72 411.6795959472656 197.4671173095703)"></use>
+            </a>
+            <a class="item" role="link" tabindex="0" target="_blank" id="item-4" xlink:href="mailto:rose.kohn@gmail.com" xlink:title="Contact" transform="matrix(-0.30901,-0.95105,0.95105,-0.30901,89.49011951994842,565.0183776675252)" data-svg-origin="250 250" style="">
+              <use xlink:href="#icon-4" width="40" height="40" x="391.6795959472656" y="177.4671173095703" transform="rotate(72 411.6795959472656 197.4671173095703)"></use>
+            </a>
+          </g>
+          <g id="trigger" class="trigger menu-trigger" role="button">
+            <circle cx="250" cy="250" r="35"></circle>
+            <text id="label" text-anchor="middle" x="250" y="265" fill="#fff" font-size="4em">+</text>
+          </g>
+        </svg>
       </div>
+      <h1>
+        <span>R</span>
+        <span class='menu-spot' />
+        <span>se Kohn</span>
+      </h1>
+      <h3 class="title">Front-End Developer</h3>
     </div>
   </body>
+  <script>
+    var tl = new TimelineMax(),
+        menu = document.querySelectorAll(".menu"),
+        title = document.querySelectorAll(".title"),
+        itemsContainer = document.getElementById("itemsContainer")
+
+    var svg = document.getElementById('menu'),
+    		items = svg.querySelectorAll('.item'),
+        trigger = document.getElementById('trigger'),
+        triggerWrapper = document.querySelectorAll('#trigger'),
+        label = trigger.querySelectorAll('#label')[0],
+        open = false,
+        angle = 35;
+    tl.staggerFrom(menu, 5, {
+      y: 50,
+      ease: Elastic.easeOut.config(4, 0.3)
+    }, 0.1)
+    Draggable.create(title, {
+      bounds: window,
+      type: "x,y",
+      edgeResistance: 20,
+      throwProps: true
+    })
+
+    trigger.addEventListener('click', toggleMenu, false);
+
+    function toggleMenu(event) {
+      itemsContainer.classList.remove('hide')
+      if (!event) var event = window.event;
+      event.stopPropagation();
+      open = !open;
+      if (open) {
+        var tl = new TimelineLite();
+        tl.to(triggerWrapper, 2, {y: -40, ease: Elastic.easeOut.config(4, 0.7)}, 0.05);
+      	tl.to(items, 0.2, {scale:1, ease:Back.easeOut.config(4)}, 0.05);
+        for(var i=0; i<items.length; i++){
+          tl.to(items[i], 0.7, {rotation:-i*angle-16 + "deg", ease:Bounce.easeOut}, 0.35);
+        }
+        label.innerHTML = "-";
+        svg.style.pointerEvents = "auto";
+      } else {
+        var tl = new TimelineLite();
+        for(var i=0; i<items.length; i++){
+          tl.to(items[i], 0.3, {rotation: 0, ease:Circ.easeOut}, 0.05);
+        }
+        tl.to(items, .3, {scale:0, ease:Back.easeIn}, 0.3);
+        label.innerHTML = "+";
+        svg.style.pointerEvents = "none";
+        tl.to(triggerWrapper, 2, {y: 0, ease: Elastic.easeOut.config(2, 0.7)}, 0.05);
+      }
+    }
+
+    svg.onclick = function (e) {
+        e.stopPropagation();
+    }
+
+    var tlLite = new TimelineLite();
+    for(var i=0; i<items.length; i++){
+      tlLite.to(items[i], 0.3, {rotation: 0}, 0.05);
+    }
+    tlLite.to(items, .3, {scale:0}, 0.3);
+  </script>
 </html>

@@ -33,18 +33,6 @@ body {
 ol, ul {
   list-style: none;
 }
-blockquote, q {
-  quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
 
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
@@ -87,7 +75,7 @@ body {
 }
 
 h1 {
-  margin: 255px 30px 0px 30px;
+  margin: 350px 0px 0px 45px;
   text-align: center;
   color: white;
   font: 70px 'Syncopate', sans-serif;
@@ -103,43 +91,50 @@ h3 {
   text-shadow: 2px 2px 1px rgba(0, 0, 0, .5);
 }
 
-ul {
-  text-align: center;
+.title {
+  color: #89A1D4;
 }
 
-li {
+.menu {
   display: inline-block;
-  border: 2px solid white;
-  height: 30px;
-  margin: 1%;
-  margin-top: 5px;
-  width: 80px;
-  padding: 4px;
-  color: white;
+  margin: 0 -15px;
 }
 
-li:hover {
-  background-color: white;
-  color: #6E81AA;
+.menu-wrapper {
+  position: relative;
+  height: 0;
+  width: 50%;
+}
+
+.menu-spot {
+  margin: 0 35px;
+}
+
+.hide { display: none; }
+
+#menu {
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: 176px;
+  left: 94px;
+  width: 100%;
 }
 
 a {
-  text-decoration: none;
-  /*color: white;*/
-  color: #89A1D4;
-  font-weight: 550;
+  cursor: pointer;
+  outline: none;
 }
 
-.company:hover {
-  color: white;
+.menu-trigger {
+  fill: #7DA7FE;
+  pointer-events: auto;
 }
 
-.navigation a {
-  font-variant: small-caps;
-}
+.menu-trigger:hover, .menu-trigger:focus { cursor: pointer; }
 
-.title {
-  color: #89A1D4;
+symbol {
+  overflow: visible;
 }
 
 @media (max-width 500px) {
